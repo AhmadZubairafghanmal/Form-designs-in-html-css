@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Designing</title>
+    <style>
+      :root {
+        --green-color: #1cd34c;
+        --blue-color: #000559;
+        --white-color: #ffffff;
+        --light-gray: #e8eaed;
+        --light-blue: #05cde1;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+      }
+
+      /* section style */
+      .body_container {
+        width: 55vw;
+        height: 80vh;
+        border: 1px solid gray;
+        margin: 0 auto;
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
+      }
+
+      .symbol_div {
+        width: 3.5rem;
+        height: 10rem;
+        background: linear-gradient(
+          to top,
+          var(--light-blue),
+          var(--green-color) 60%
+        );
+        border-radius: 2rem;
+        transform: rotate(50deg);
+        float: right;
+        margin-right: -0.8rem;
+        margin-bottom: 2rem;
+      }
+
+      /* section div-1 style */
+      .info_area {
+        width: 50%;
+        height: 100%;
+        background-color: var(--blue-color);
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+        overflow: hidden;
+      }
+
+      .info_area button {
+        margin-top: 3rem;
+        margin-left: 2rem;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        color: var(--green-color);
+        border: 1px solid var(--green-color);
+        background-color: var(--blue-color);
+        padding: 5px 6px;
+      }
+
+      .info_area button:hover {
+        color: var(--blue-color);
+        background-color: var(--white-color);
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+
+      .info_area h1 {
+        color: var(--white-color);
+        font-weight: 700;
+        margin-top: 1.5rem;
+        margin-left: 2rem;
+        font-size: 1.9rem;
+        width: 17rem;
+      }
+
+      .info_area h2 {
+        color: var(--white-color);
+        width: 15rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-top: 2.5rem;
+        margin-left: 2rem;
+      }
+
+      ul {
+        display: grid;
+        grid-template-columns: 2rem 20rem;
+        align-content: center;
+        margin-top: 2rem;
+        margin-left: 2rem;
+        grid-row-gap: 1.7rem;
+      }
+
+      .checkmark {
+        grid-column: 1 / 2;
+        color: var(--white-color);
+      }
+
+      li {
+        color: var(--white-color);
+        list-style-type: none;
+        grid-column: 2 / 3;
+      }
+
+      form {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        display: grid;
+        align-content: center;
+        grid-template-columns: 50% 50%;
+        grid-row-gap: 1.5rem;
+        margin: 0 2rem;
+      }
+
+      .input {
+        border-radius: 0.2rem;
+        outline: none;
+        border: none;
+        padding: 0.6rem;
+        border: 1.5px solid var(--light-gray);
+      }
+
+      .input_name,
+      .input_lastname {
+        width: 9.25rem;
+        margin: 0 auto;
+      }
+
+      .input_lastname {
+        margin-left: 0.5rem;
+      }
+
+      .input_email,
+      .input_country_code {
+        margin-left: 0.3rem;
+      }
+
+      .input_email {
+        grid-column: 1 / 3;
+        width: 19.2rem;
+      }
+
+      .phone_num {
+        display: grid;
+        grid-template-columns: 5rem 14.5rem;
+      }
+
+      .input_country_code {
+        grid-column: 1 / 2;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 0.2rem;
+        border-bottom-left-radius: 0.2rem;
+      }
+
+      .input_number {
+        grid-column: 2 / 3;
+        border-top-right-radius: 0.2rem;
+        border-bottom-right-radius: 0.2rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-left: none;
+      }
+
+      .checkbox_container {
+        display: grid;
+        grid-column: 1 /3;
+        margin-left: 0.4rem;
+        grid-row-gap: 2rem;
+      }
+
+      .checkbox_container label {
+        font-size: 0.8rem;
+        margin-left: 1.5rem;
+        margin-top: -0.52rem;
+      }
+
+      .input_checkbox {
+        position: relative;
+        top: 2.4rem;
+        width: 1rem;
+        height: 1rem;
+      }
+
+      #checkbox {
+        accent-color: #e43f75;
+      }
+
+      .checkbox_container .submit {
+        width: 100%;
+        height: 3.3rem;
+        border: none;
+        color: var(--white-color);
+        font-size: 1.1rem;
+        background-image: linear-gradient(to right, #c3409f, #ea7346);
+        border-radius: 0.2rem;
+        cursor: pointer;
+      }
+
+      .checkbox_container p {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      .checkbox_container p a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="body_container">
+      <div class="info_area">
+        <div class="symbol_div"></div>
+        <button>Talk to a Career Expert</button>
+        <h1>Schedule 1:1 free counselling</h1>
+        <h2>Start your journey to becoming a Full-Stack Developer!</h2>
+        <ul>
+          <span class="checkmark">&checkmark;</span>
+          <li>Experience Outcome-based Immersive Learning</li>
+          <span class="checkmark">&checkmark;</span>
+          <li>
+            Globally Recognized Accreditations, Case Studies and Real-World
+            Simulations
+          </li>
+          <span class="checkmark">&checkmark;</span>
+          <li>Training by Renowned Industry Experts</li>
+        </ul>
+      </div>
+
+      <form class="">
+        <input type="text" placeholder="First Name*" class="input_name input" />
+        <input
+          type="text"
+          placeholder="Last Name*"
+          class="input_lastname input"
+        />
+        <input type="email" placeholder="Email*" class="input_email input" />
+        <div class="phone_num">
+          <select name="Country Code" id="" class="input_country_code input">
+            <optgroup>
+              <option value="">+93</option>
+              <option value="">+92</option>
+            </optgroup>
+          </select>
+
+          <input
+            type="tel"
+            placeholder="Phone*"
+            required
+            class="input_number input"
+          />
+          <div class="checkbox_container">
+            <input
+              type="checkbox"
+              checked
+              class="input_checkbox"
+              id="checkbox"
+            />
+            <label for="checkbox"
+              >I want to recive updates directly on WhatsApp</label
+            >
+
+            <input type="submit" value="Submit" class="submit" />
+            <p>
+              By tapping submit, you agree to knowledgeHut
+              <a href="#"> Privacy Policy</a> and
+              <a href="#">Term & Conditions</a>
+            </p>
+          </div>
+        </div>
+      </form>
+      <div></div>
+    </div>
+  </body>
+</html>

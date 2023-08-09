@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --white: #ffffff;
+        --blue: #3f51b5;
+      }
+
+      body {
+        background-color: #d3d3d3;
+      }
+
+      form {
+        font-family: sans-serif;
+        width: 34em;
+        height: 33em;
+        background-color: var(--white);
+        margin: 4em auto;
+        border-radius: 0.4em;
+      }
+
+      form .formElements {
+        margin-left: 0.3em;
+      }
+
+      form h1 {
+        background-color: var(--blue);
+        text-align: center;
+        color: var(--white);
+        padding: 0.5em 0;
+        text-transform: capitalize;
+        border-top-right-radius: 0.2em;
+        border-top-left-radius: 0.2em;
+        font-weight: 300;
+      }
+
+      form .formElements #nameInputField,
+      form .formElements #lastNameInputField {
+        display: inline-block;
+      }
+
+      form .formElements {
+        padding: 1em;
+      }
+
+      form .formElements input[type="text"],
+      form .formElements input[type="number"],
+      form .formElements input[type="email"],
+      form .formElements input[type="password"] {
+        display: block;
+        border: none;
+        border-bottom: 0.1em solid #808080;
+        outline: none;
+        margin: 0.5em 0.3em 0 0;
+        width: 18.2em;
+      }
+
+      form .formElements .elements label {
+        color: #d3d3d3;
+        margin-left: 0.1em;
+        font-size: 0.9em;
+      }
+
+      ::placeholder {
+        color: #575555;
+        font-size: 1.2em;
+      }
+
+      form .formElements .elements {
+        margin-bottom: 1.5em;
+        float: left;
+      }
+
+      form .formElements .elements #gender {
+        display: inline-block;
+        float: left;
+        color: #000000;
+      }
+
+      form .formElements .genderElements {
+        margin-top: 0.5em;
+      }
+
+      form .formElements .elements .mainHolder {
+        display: inline-block;
+        width: 12em;
+      }
+
+      form .formElements .elements .genderHolder {
+        margin-left: 0.5em;
+      }
+
+      form .formElements .genderElements .mainHolder .female {
+        margin-top: 0.5em;
+      }
+
+      form .formElements .age {
+        margin-left: 0.4em;
+      }
+
+      form .formElements input[type="email"] {
+        width: 37em;
+        background-color: var(--white);
+      }
+
+      form .formElements #newPassword,
+      form .formElements #confirmPassword {
+        display: block;
+      }
+
+      form .formElements .button .btn {
+        display: block;
+        padding: 0.8em 0;
+        border-radius: 0.2em;
+        text-transform: uppercase;
+      }
+
+      form .formElements .button #submitBtn {
+        background-color: #e0e0e0;
+        color: #918f8f;
+        border: none;
+        width: 37.5em;
+        cursor: pointer;
+      }
+
+      form .formElements .button #linkBtn {
+        background-color: var(--blue);
+        color: var(--white);
+        text-align: center;
+        width: 34.7em;
+        text-decoration: none;
+        margin-top: 1.5em;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <h1>material desing sign up form</h1>
+      <div class="formElements">
+        <div class="elements" id="nameInputField">
+          <label for="name">First Name</label>
+          <input type="text" placeholder="Your First Name" id="name" />
+        </div>
+
+        <div class="elements" id="lastNameInputField">
+          <label for="lastname">Last Name</label>
+          <input type="text" placeholder="Your Last Name" id="lastname" />
+        </div>
+
+        <div class="elements genderElements">
+          <label for="gender" id="gender">Gender:</label>
+
+          <div class="mainHolder">
+            <div class="genderHolder">
+              <input type="radio" id="gender" /> Male
+            </div>
+
+            <div class="genderHolder female">
+              <input type="radio" id="gender" /> Femal
+            </div>
+          </div>
+        </div>
+
+        <div class="elements age">
+          <label for="age">Age</label>
+          <input type="number" placeholder="20" />
+        </div>
+
+        <div class="elements">
+          <label for="email">Email</label>
+          <input type="email" placeholder="someone@example.com" id="email" />
+        </div>
+
+        <div class="elements">
+          <label for="newPassword">New Password</label>
+          <input type="password" placeholder="********" id="newPassword" />
+        </div>
+
+        <div class="elements">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" placeholder="********" id="confirmPassword" />
+        </div>
+
+        <div class="button">
+          <input type="submit" value="submit" class="btn" id="submitBtn" />
+          <a href="#" class="btn" id="linkBtn">code pen login form</a>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
